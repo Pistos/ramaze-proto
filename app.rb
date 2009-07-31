@@ -5,10 +5,11 @@
 
 require 'rubygems'
 require 'ramaze'
+require 'json'
 
 # Make sure that Ramaze knows where you are
-Ramaze.options.roots = [__DIR__]
+Ramaze.options.roots = [ __DIR__ ]
 
 # Initialize controllers and models
-require __DIR__('model/init')
-require __DIR__('controller/init')
+require __DIR__( 'model/init' )
+require __DIR__( 'controller/init' )
