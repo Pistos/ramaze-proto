@@ -2,12 +2,12 @@
 
 require 'm4dbi'
 
-# $dbh = DBI.connect(
-  # "DBI:#{Ramalytics.options.db.adapter}:#{Ramalytics.options.db.name}",
-  # Ramalytics.options.db.user,
-  # Ramalytics.options.db.password
-# )
+$dbh = DBI.connect(
+  "DBI:#{ApplicationName.options.db.adapter}:#{ApplicationName.options.db.name}",
+  ApplicationName.options.db.user,
+  ApplicationName.options.db.password
+)
 
 # Here go your requires for models:
-# require 'model/user'
+require 'model/user'
 
