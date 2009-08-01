@@ -21,6 +21,13 @@
   <body>
     <h1>#{@title}</h1>
     <div id="content">
+      <div id="main-menu">
+        #{ a 'Home', ApplicationName::Controllers::Main.r( :/ ) }
+        #{ a 'About', ApplicationName::Controllers::Main.r( :about ) }
+        #{ a 'Register', ApplicationName::Controllers::Main.r( :register ) }
+        #{ a 'Login', ApplicationName::Controllers::Main.r( :login ) }
+        #{ a 'Logout', ApplicationName::Controllers::Main.r( :logout ) }
+      </div>
       #{flashbox}
       #@content
     </div>
