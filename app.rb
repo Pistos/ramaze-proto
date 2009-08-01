@@ -5,6 +5,8 @@
 
 require 'rubygems'
 require 'ramaze'
+require 'digest/sha1'
+require 'cgi'
 require 'json'
 
 # Make sure that Ramaze knows where you are
