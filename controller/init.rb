@@ -7,6 +7,8 @@ module ApplicationName
     helper :xhtml
     engine :Etanni
     provide( :json, :type => 'application/json' ) { |action, value| value.to_json }
+
+    trait :user_model => Models::User
   end
 end
 
