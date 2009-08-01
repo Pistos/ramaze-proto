@@ -1,30 +1,110 @@
-* {
-  margin: 0px;
-  padding: 0px;
+body {
+    padding: 2em;
+    background: #990000;
 }
 
-h1 {
+h1,h2 {
   text-align: center;
 }
 
-body {
-  margin: 2em;
-  background: #ccf;
+h1,h2,h3 {
+    margin-bottom: 1em;
 }
 
-#content {
-  margin: 1em;
-  background: #fff;
-  padding: 1em;
-  -moz-border-radius: 1em;
-  -webkit-border-radius: 1em;
-  border-radius: 1em;
+p + h3 {
+    margin-top: 1em;
 }
 
-p {
-  margin: 1em;
+a {
+    color: #CC0000;
+}
+a:visited {
+    color: #880000;
+}
+a:hover {
+    background-color: #FFF6F6;
+}
+
+#page {
+    background: #fff;
+    padding: 3em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    min-height: 400px;
+}
+
+#footer {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 3em;
+}
+#footer a {
+    color: #CC9999;
+    text-decoration: none;
+}
+
+img {
+    border: 0px;
 }
 
 ul, ol {
   margin-left: 3em;
+}
+
+.notice {
+    border: 2px solid #660000;
+    background: #FFEEEE;
+    padding: 1.5em;
+    margin-bottom: 2em;
+}
+
+table.table {
+    border: 0px;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+table.table td, table.table th {
+    border: 1px solid #000000;
+    padding: 0.5em;
+    overflow: hidden;
+}
+
+.flash, .message {
+    border: 1px solid;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.message {
+    display: none;
+    position: fixed;
+    top: 2em;
+    left: 88px;
+    width: 60%;
+}
+
+#flash_success, #message-success {
+    border-color: #993300;
+    color: #993300;
+    background: #FFDDAA;
+}
+#flash_error, #message-error {
+    border-color: #660000;
+    color: #660000;
+    background: #FFEEEE;
+}
+
+#main-menu {
+    background-color: #EEEEEE;
+    padding: 0.5em 1em;
+    font-size: 12px;
+    margin-bottom: 1em;
+}
+#main-menu > * {
+    margin-right: 1em;
+}
+
+.unimportant {
+    opacity: 0.4;
 }

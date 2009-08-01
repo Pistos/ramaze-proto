@@ -16,11 +16,16 @@
     #{ css 'screen' }
     #{ js 'jquery-1.3.2.min' }
     #{ js 'jquery.json-1.3.min' }
+    #{ js 'effects' }
+    #{ js 'main' }
   </head>
 
   <body>
-    <h1>#{@title}</h1>
-    <div id="content">
+
+    <div id="page">
+
+      <h1>#{@title}</h1>
+
       <div id="main-menu">
         #{ a 'Home', ApplicationName::Controllers::Main.r( :/ ) }
         #{ a 'About', ApplicationName::Controllers::Main.r( :about ) }
@@ -32,9 +37,24 @@
           #{ a 'Login', ApplicationName::Controllers::Main.r( :login ) }
         <?r end ?>
       </div>
+
       #{flashbox}
-      #@content
+      <div id="message-success" class="message"></div>
+      <div id="message-error" class="message"></div>
+
+      <div id="content">
+        #@content
+      </div>
+
     </div>
+
+    <div id="footer">
+      Powered by:
+      <a href="http://ramaze.net">Ramaze</a>,
+      <a href="http://purepistos.net/m4dbi">M4DBI</a>,
+      <a href="http://jquery.com">jQuery</a>
+    </div>
+
   </body>
 
 </html>
