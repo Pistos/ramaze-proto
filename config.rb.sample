@@ -1,0 +1,13 @@
+module ApplicationName
+  include Ramaze::Optioned
+
+  options.dsl do
+    sub :db do
+      o 'Database adapter', :adapter, 'Pg'
+      o 'Database name', :name, 'ramalytics'
+      o 'Database user', :user, 'ramalytics'
+      o 'Database password', :password, 'ramalytics'
+    end
+    o 'Encryption salt', :salt, 'the most random string you can think of'
+  end
+end
