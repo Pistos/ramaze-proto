@@ -17,3 +17,11 @@ require 'config'
 # Initialize controllers and models
 require __DIR__( 'model/init' )
 require __DIR__( 'controller/init' )
+
+File.open( 'ramaze.pid', 'w' ) do |f|
+  f.puts Process.pid
+end
+
+Ramaze::Log.loggers = [
+  Logger.new( "#{__DIR__}/log/ramaze.log", 'daily' ),
+]
